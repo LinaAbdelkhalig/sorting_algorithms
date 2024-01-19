@@ -25,8 +25,8 @@ void switcharoo(int *x, int *y)
 
 void selection_sort(int *array, size_t size)
 {
-	unsigned int i, j;
-	int min, temp;
+	unsigned int i, j, min;
+
 	if (!array || size == 0 || size == 1)
 		return;
 
@@ -38,7 +38,7 @@ void selection_sort(int *array, size_t size)
 			if (array[j] < array[min])
 				min = j;
 		}
-		&swap(&array[min], &array[i])
+		switcharoo(&array[min], &array[i]);
 		print_array(array, size);
 	}
 }
