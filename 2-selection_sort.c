@@ -38,7 +38,10 @@ void selection_sort(int *array, size_t size)
 			if (array[j] < array[min])
 				min = j;
 		}
-		switcharoo(&array[min], &array[i]);
-		print_array(array, size);
+		if (i != min)
+		{
+			switcharoo(&array[min], &array[i]);
+			print_array(array, size);
+		}
 	}
 }
