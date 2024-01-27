@@ -8,12 +8,13 @@
  */
 void counting_sort(int *array, size_t size)
 {
-	int *count, *output, max = array[0];
+	int *count, *output, max;
 	size_t i, j;
 
 	if (!array || size < 2)
 		return;
 
+	max = array[0];
 	for (i = 0; i < size; i++)
 	{
 		if (array[i] > max)
