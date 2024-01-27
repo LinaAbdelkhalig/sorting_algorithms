@@ -20,7 +20,6 @@ void counting_sort(int *array, size_t size)
 		if (array[i] > max)
 			max = array[i];
 	}
-
 	count = calloc((max + 1), sizeof(int));
 	if (!count)
 		return;
